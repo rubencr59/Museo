@@ -4,10 +4,9 @@ import java.util.Date;
 
 public class Artista {
 
-    private String nombre, lugarNacimiento;
-    private Date fechaNac, fechaFall;
+    private String nombre, lugarNacimiento,fechaNac, fechaFall;
 
-    public Artista(String nombre, String lugarNacimiento, Date fechaNac, Date fechaFall){
+    public Artista(String nombre, String lugarNacimiento, String fechaNac, String fechaFall){
         this.nombre = nombre;
         this.lugarNacimiento = lugarNacimiento;
         this.fechaNac = fechaNac;
@@ -22,5 +21,21 @@ public class Artista {
                 ", fechaNac=" + fechaNac +
                 ", fechaFall=" + fechaFall +
                 '}';
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getLugarNacimiento() {
+        return lugarNacimiento;
+    }
+
+    public String getFechaNac() {
+        return fechaNac;
+    }
+
+    public String getFechaFall() {
+        return fechaFall;
     }
 }
