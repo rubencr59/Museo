@@ -41,11 +41,11 @@ public class Main {
 
         //Eliminar las obras del catálogo.
         controlador.eliminarObra(103);
-        controlador.eliminarObra(103);
+        controlador.eliminarObra(101);
 
         //Mostrar la escultura más alta y la superficie de las pinturas.
-        vistaMuseo.mostrarMensaje("La escultura más alta es: " + Servicio.buscaObra(catalogoMuseo.getListaDeObras(), Servicio.masAlta(catalogoMuseo.getListaDeObras())));
-        vistaMuseo.mostrarMensaje("La superficie de las pinturas es: " + Servicio.calcularSuperficie(catalogoMuseo.getListaDeObras()));
+        vistaMuseo.mostrarMensaje("La escultura más alta es: " + Servicio.buscaObra(catalogoMuseo.getListaDeObras(), Servicio.masAlta(catalogoMuseo.getListaDeObras())).getTitulo());
+        vistaMuseo.mostrarMensaje("La superficie de las pinturas es: " + Servicio.calcularSuperficie(catalogoMuseo.getListaDeObras()) + " cm2.");
 
     }
 }

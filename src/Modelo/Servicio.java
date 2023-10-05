@@ -30,10 +30,8 @@ public class Servicio {
 
         if (obraAborrar!=null){
             listaDeObras.remove(obraAborrar);
-            System.out.println("Obra borrada con éxito.");
             return true;
         }else{
-            System.out.println("No se ha encontrado la obra.");
             return false;
         }
     }

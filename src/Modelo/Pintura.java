@@ -13,10 +13,10 @@ public class Pintura extends Obra {
     public Pintura(String titulo, Integer numInventario, Artista autor, Integer año, Integer Altura, Integer Anchura, String soporte) {
         super(titulo, numInventario, autor, año);
         this.dimensiones = new ArrayList<Integer>();
-        this.dimensiones.add(Altura, Anchura);
+        dimensiones.add(Altura);
+        dimensiones.add(Anchura);
         this.soporte = soporte;
     }
-
     public List<Integer> getDimensiones() {
         return dimensiones;
     }
