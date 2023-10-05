@@ -1,7 +1,5 @@
 package Modelo;
 
-import java.util.Date;
-
 public class Artista {
 
     private String nombre, lugarNacimiento,fechaNac, fechaFall;
