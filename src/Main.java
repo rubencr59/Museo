@@ -22,8 +22,8 @@ public class Main {
         Artista michelangelo = new Artista("Michelangelo Buonarroti", "Italia", "06/03/1475", "18/02/1564");
 
         //Crear las pinturas.
-        Pintura guernica = new Pintura("Guernica", 101, picasso, 1937, 349.3, "Óleo sobre lienzo");
-        Pintura liriosDeAgua = new Pintura("Lirios de Agua", 102, monet, 1916, 200.0, "Óleo sobre lienzo");
+        Pintura guernica = new Pintura("Guernica", 101, picasso, 1937, 350, 782, "Óleo sobre lienzo");
+        Pintura liriosDeAgua = new Pintura("Lirios de Agua", 102, monet, 1916, 90, 90, "Óleo sobre lienzo");
 
         //Crear las esculturas.
         Escultura elPensador = new Escultura("El Pensador", 202, klimt, 1880, "Bronce", 181.0);
@@ -45,7 +45,7 @@ public class Main {
 
         //Mostrar la escultura más alta y la superficie de las pinturas.
         vistaMuseo.mostrarMensaje("La escultura más alta es: " + Servicio.buscaObra(catalogoMuseo.getListaDeObras(), Servicio.masAlta(catalogoMuseo.getListaDeObras())));
-        vistaMuseo.mostrarMensaje("La superficie de las pinturas es: " + Servicio.superficie(catalogoMuseo.getListaDeObras()));
+        vistaMuseo.mostrarMensaje("La superficie de las pinturas es: " + Servicio.calcularSuperficie(catalogoMuseo.getListaDeObras()));
 
     }
 }

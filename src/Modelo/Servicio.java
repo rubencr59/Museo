@@ -38,18 +38,6 @@ public class Servicio {
         }
     }
 
-    public static Double superficie(List<Obra> listaDeObras){
-
-        Double superficieTotal = 0.0;
-
-        for (Obra obra:listaDeObras){
-            if (obra instanceof Pintura){
-                Pintura pintura = (Pintura) obra;
-                superficieTotal += pintura.getDimensiones();
-            }
-        }
-        return superficieTotal;
-    }
 
 
     public static Integer masAlta(List<Obra> listaDeObras){
@@ -68,6 +56,20 @@ public class Servicio {
         return esculturaMasAlta.getNumInventario();
     }
 
+    public static Integer calcularSuperficie(List<Obra> listaDeObras){
+
+        Integer superficieTotal = 0;
+
+        for(Obra obra:listaDeObras){
+            if(obra instanceof Pintura){
+                Pintura pintura = (Pintura) obra;
+                superficieTotal += pintura.getAltura()*pintura.getAnchura();
+            }
+        }
+
+        return superficieTotal;
+
+    }
 
 
 }
