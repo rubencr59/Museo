@@ -1,20 +1,31 @@
 package Controlador;
 
-import Modelo.Catalogo;
+import DAOCatalogo.DAOCatalogo;
+import Modelo.Artista;
+import Modelo.Escultura;
 import Modelo.Obra;
-import Modelo.Servicio;
+import Modelo.Pintura;
+import Servicio.ServicioCatalogo;
 import Vista.MuseoVista;
 
-public class MuseoControlador {
-     private Catalogo catalogoMuseo;
-    private MuseoVista vista;
+import java.util.ArrayList;
 
-    public MuseoControlador(Catalogo catalogoMuseo, MuseoVista vista) {
-        this.catalogoMuseo = catalogoMuseo;
-        this.vista = vista;
+public class MuseoControlador {
+
+    private MuseoVista vista;
+    private ServicioCatalogo ServicioCatalogo;
+
+    private DAOCatalogo DAOCatalogo;
+
+    public MuseoControlador() {
+        this.vista = new MuseoVista();
+        this.DAOCatalogo = new DAOCatalogo();
+        this.ServicioCatalogo = new ServicioCatalogo(DAOCatalogo.getListaDeObras());
     }
+
+
     public void agregarObra(Obra obra) {
-        boolean exito = Servicio.añadeObra(catalogoMuseo.getListaDeObras(), obra);
+        boolean exito = ServicioCatalogo.añadeObra(obra);
         if (exito) {
             vista.mostrarMensaje("Obra añadida con éxito.");
         } else {
@@ -23,7 +34,7 @@ public class MuseoControlador {
     }
 
     public void eliminarObra(int id) {
-        boolean exito = Servicio.eliminaObra(catalogoMuseo.getListaDeObras(), id);
+        boolean exito = ServicioCatalogo.eliminaObra( id);
         if (exito) {
             vista.mostrarMensaje("Obra eliminada con éxito.");
         } else {
@@ -32,6 +43,9 @@ public class MuseoControlador {
     }
 
     public void mostrarCatalogo() {
-        vista.mostrar(catalogoMuseo.getListaDeObras());
+        vista.mostrar(ServicioCatalogo.getCatalogo());
     }
+
+
+
 }

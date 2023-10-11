@@ -11,16 +11,6 @@ public class Artista {
         this.fechaFall = fechaFall;
     }
 
-    @Override
-    public String toString() {
-        return "Artista{" +
-                "nombre='" + nombre + '\'' +
-                ", lugarNacimiento='" + lugarNacimiento + '\'' +
-                ", fechaNac=" + fechaNac +
-                ", fechaFall=" + fechaFall +
-                '}';
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -35,5 +25,15 @@ public class Artista {
 
     public String getFechaFall() {
         return fechaFall;
+    }
+
+    @Override
+    public String toString() {
+        return "Artista{" +
+                "nombre='" + nombre + '\'' +
+                ", lugarNacimiento='" + lugarNacimiento + '\'' +
+                ", fechaNac=" + fechaNac +
+                ", fechaFall=" + fechaFall +
+                '}';
     }
 }
