@@ -37,10 +37,10 @@ abstract public class Obra {
 
     @Override
     public String toString() {
-        return "titulo='" + titulo + '\n' +
-                " numInventario=" + numInventario + '\n' +
-                " año=" + año + '\n' +
-                " autor=" + autor ;
+        return " numInventario= " + numInventario + '\n' +
+                " titulo= " + titulo + '\n' +
+                " año= " + año + '\n' +
+                " autor= " + autor.getNombre() ;
 
     }
 

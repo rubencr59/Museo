@@ -37,7 +37,6 @@ public class ServicioCatalogo {
     //Añade una obra al catálogo.
     public static boolean añadeObra(Obra obra){
         Catalogo.add(obra);
-        System.out.println("Obra añadida con éxito.");
         return true;
     }
 

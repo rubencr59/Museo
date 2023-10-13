@@ -37,9 +37,10 @@ public class Pintura extends Obra {
 
     @Override
     public String toString() {
-        return "PINTURA\n" +
+        return
+                "PINTURA\n" + super.toString() +
                 " dimensiones= " + dimensiones + '\n' +
-                " soporte='" + soporte + '\n' +
-                super.toString();
+                " soporte= " + soporte + '\n' ;
+
     }
 }
